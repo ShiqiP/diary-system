@@ -4,7 +4,6 @@ pluralize(null);
 
 
 
-export const UserModel = model<User>('user', userSchema);
 
 const diarySchema = new Schema({
     user_id: mongoose.Types.ObjectId,

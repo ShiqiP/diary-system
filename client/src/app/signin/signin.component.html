@@ -1,0 +1,21 @@
+<div class="signin-container">
+    <form class="signin-form" [formGroup]="form" (ngSubmit)="handleSubmit()">
+        <h1>Signin</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter you email</mat-label>
+            <input required matInput placeholder="" [formControl]="email" (blur)="updateErrorMessage()" />
+            @if (email.invalid) {
+            <mat-error>{{errorMessage()}}</mat-error>
+            }
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Enter your password</mat-label>
+            <input required matInput [formControl]="password" [type]="pwdHide() ? 'password' : 'text'" />
+            <button mat-icon-button matSuffix (click)="pwdIconClick($event)" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="pwdHide()">
+                <mat-icon>{{pwdHide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <button mat-flat-button type="submit">Confirm</button>
+    </form>
+</div>
