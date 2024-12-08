@@ -8,7 +8,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideZoneChangeDetection({
+      eventCoalescing: true,
+    }),
     provideRouter(routes),
     provideHttpClient(withInterceptors([commonInterceptor])),
     provideAnimationsAsync(),
@@ -17,5 +19,5 @@ export const appConfig: ApplicationConfig = {
     //   useClass: commonInterceptor,
     //   multi: true, // Allows multiple interceptors to be used
     // },
-  ]
+  ],
 };

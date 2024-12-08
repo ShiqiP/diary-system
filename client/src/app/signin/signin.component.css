@@ -1,29 +1,29 @@
 .signin-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.signin-form{
-    display: grid;
-    grid-column: 1;
-    grid-row: 2;
+.signin-form {
+  display: grid;
+  grid-column: 1;
+  grid-row: 2;
 }
 
-example-container mat-form-field+mat-form-field {
-    margin-left: 8px;
+example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
 }
 
 .example-right-align {
-    text-align: right;
+  text-align: right;
 }
 
 input.example-right-align::-webkit-outer-spin-button,
 input.example-right-align::-webkit-inner-spin-button {
-    display: none;
+  display: none;
 }
 
 input.example-right-align {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
